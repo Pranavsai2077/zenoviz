@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Bold Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+        href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,500,600,700&f[]=satoshi@400,500,600,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Standard Modal -->
+    <div id="modal-standard"
+        class="fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="absolute inset-0 bg-gray-900/40 backdrop-blur-sm modal-bg-close"></div>
+        <div
+            class="relative bg-white w-full max-w-lg rounded-2xl shadow-2xl p-8 transform scale-95 transition-transform duration-300 overflow-y-auto max-h-[90vh] modal-content-box">
+            <button class="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors modal-close-btn">
+                <iconify-icon icon="lucide:x" class="text-xl"></iconify-icon>
+            </button>
+            <h3 class="font-display text-2xl font-bold mb-1">Standard Package Form</h3>
+            <p class="text-[11px] font-bold uppercase tracking-wider text-accent mb-2">Simple & Fast Lead Capture</p>
+            <p class="text-sm text-gray-500 mb-6">Best for smaller builders who want quick communication.</p>
+
+            <form class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Full
+                            Name</label><input type="text"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Company
+                            Name</label><input type="text"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Phone
+                            Number</label><input type="tel"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Email
+                            Address</label><input type="email"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Project
+                            Location</label><input type="text"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Number of
+                            Rooms</label><input type="number"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Property Type</label>
+                        <select
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required>
+                            <option value="" disabled selected>Select</option>
+                            <option>Villa</option>
+                            <option>Small Apartment</option>
+                            <option>Plot Layout</option>
+                            <option>Interior Only</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Need Exterior
+                            Add-on?</label>
+                        <select
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required>
+                            <option value="" disabled selected>Select</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Upload Floor Plan</label>
+                    <input type="file"
+                        class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-bold file:bg-surface-warm file:text-accent hover:file:bg-surface-warm/80">
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Additional Notes</label>
+                    <textarea rows="2"
+                        class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all resize-none"></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full py-3 mt-2 bg-accent text-white font-bold rounded-xl hover:bg-accent-dark transition-all duration-200 shadow-lg shadow-accent/25 text-sm">Get
+                    My Presentation Started</button>
+                <p class="text-[11px] font-bold text-center text-gray-400 mt-3">Ideal for fast-moving projects with
+                    essential
+                    presentation needs.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Deluxe Modal -->
+    <div id="modal-deluxe"
+        class="fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="absolute inset-0 bg-gray-900/50 backdrop-blur-md modal-bg-close"></div>
+        <div
+            class="relative bg-white w-full max-w-lg rounded-2xl shadow-2xl p-8 transform scale-95 transition-transform duration-300 overflow-y-auto max-h-[90vh] modal-content-box border-t-4 border-accent">
+            <button class="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors modal-close-btn">
+                <iconify-icon icon="lucide:x" class="text-xl"></iconify-icon>
+            </button>
+            <h3 class="font-display text-2xl font-bold mb-1">Deluxe Package Form</h3>
+            <p class="text-[11px] font-bold uppercase tracking-wider text-accent mb-2">Interactive Experience Focus</p>
+            <p class="text-sm text-gray-500 mb-6">This form should feel more premium and feature-oriented.</p>
+
+            <form class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Full
+                            Name</label><input type="text"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Company / Developer
+                            Name</label><input type="text"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Contact
+                            Number</label><input type="tel"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Email
+                            Address</label><input type="email"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                </div>
+                <div class="grid grid-cols-3 gap-4">
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Project
+                            Type</label><input type="text"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Number of
+                            Floors</label><input type="number"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Total Units /
+                            Villas</label><input type="number"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Required Features</label>
+                    <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded text-accent focus:ring-accent">
+                            Exterior 360°</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded text-accent focus:ring-accent">
+                            Room Navigation</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded text-accent focus:ring-accent">
+                            Custom Flooring</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded text-accent focus:ring-accent">
+                            Wall Customization</label>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Preferred UI
+                            Style</label>
+                        <select
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required>
+                            <option value="" disabled selected>Select style</option>
+                            <option>Minimal</option>
+                            <option>Luxury</option>
+                            <option>Dark</option>
+                            <option>Modern</option>
+                        </select>
+                    </div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Expected Delivery
+                            Timeline</label><input type="text"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Upload Plans / CAD
+                        Files</label>
+                    <input type="file"
+                        class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-bold file:bg-surface-warm file:text-accent hover:file:bg-surface-warm/80">
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Additional
+                        Requirements</label>
+                    <textarea rows="2"
+                        class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all resize-none"></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full py-3 mt-2 bg-accent text-white font-bold rounded-xl hover:bg-accent-dark transition-all duration-200 shadow-lg shadow-accent/25 text-sm">Build
+                    My Interactive Experience</button>
+                <p class="text-[11px] font-bold text-center text-accent/70 mt-3 uppercase tracking-widest">Step 1 of 2 —
+                    Project
+                    Details</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Premium Modal -->
+    <div id="modal-premium"
+        class="fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-md modal-bg-close"></div>
+        <div
+            class="relative bg-gray-50 w-full max-w-xl rounded-2xl shadow-2xl p-8 transform scale-95 transition-transform duration-300 overflow-y-auto max-h-[90vh] modal-content-box border border-black/10">
+            <button class="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors modal-close-btn">
+                <iconify-icon icon="lucide:x" class="text-xl"></iconify-icon>
+            </button>
+            <div class="flex items-center gap-2 mb-1">
+                <iconify-icon icon="lucide:crown" class="text-accent text-xl"></iconify-icon>
+                <h3 class="font-display text-2xl font-bold">Premium Package Form</h3>
+            </div>
+            <p class="text-[11px] font-bold uppercase tracking-wider text-accent mb-2">Luxury + Pre-Construction Sales
+                Focus
+            </p>
+            <p class="text-sm text-gray-500 mb-6">This should feel high-end and consultation-based.</p>
+
+            <form class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Full
+                            Name</label><input type="text"
+                            class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Company
+                            Name</label><input type="text"
+                            class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label
+                            class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Designation</label><input
+                            type="text"
+                            class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all">
+                    </div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Phone
+                            Number</label><input type="tel"
+                            class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div class="col-span-2"><label
+                            class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Email
+                            Address</label><input type="email"
+                            class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Project
+                            Name</label><input type="text"
+                            class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Number of BHK
+                            Variants</label><input type="text"
+                            class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Project Scale</label>
+                        <select
+                            class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required>
+                            <option value="" disabled selected>Select scale</option>
+                            <option>Villas</option>
+                            <option>Apartments</option>
+                            <option>Township</option>
+                            <option>Mixed Use</option>
+                        </select>
+                    </div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Preferred Branding
+                            Style</label>
+                        <select
+                            class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required>
+                            <option value="" disabled selected>Select style</option>
+                            <option>Luxury</option>
+                            <option>Corporate</option>
+                            <option>Modern</option>
+                            <option>Minimal</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-500 uppercase mb-2">Project Features
+                        Needed</label>
+                    <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded text-accent focus:ring-accent">
+                            Need Aerial View?</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded text-accent focus:ring-accent">
+                            Need Day/Night Mode?</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded text-accent focus:ring-accent">
+                            Need Custom Figma UI?</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded text-accent focus:ring-accent">
+                            Need Video Footage?</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded text-accent focus:ring-accent">
+                            Need AI Chatbot?</label>
+                    </div>
+                </div>
+                <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Expected Launch
+                        Date</label><input type="date"
+                        class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                        required></div>
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Upload Branding / Floor
+                        Plans /
+                        References</label>
+                    <input type="file" multiple
+                        class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-bold file:bg-surface-warm file:text-accent hover:file:bg-surface-warm/80">
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Describe Your
+                        Vision</label>
+                    <textarea rows="2"
+                        class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all resize-none"
+                        required></textarea>
+                </div>
+                <p class="text-sm font-semibold text-center text-accent/80 mt-2 mb-2 italic">Your project deserves a
+                    presentation experience that sells before construction begins.</p>
+                <button type="submit"
+                    class="w-full py-4 mt-2 bg-accent text-white font-bold rounded-xl hover:bg-accent-dark transition-all duration-200 shadow-xl shadow-accent/25 text-sm uppercase tracking-wider">Request
+                    Premium Consultation</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Ultra Premium Modal -->
+    <div id="modal-ultra"
+        class="fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-lg modal-bg-close"></div>
+        <div
+            class="relative bg-[#111] text-white w-full max-w-2xl rounded-2xl shadow-2xl p-8 transform scale-95 transition-transform duration-300 overflow-y-auto max-h-[90vh] modal-content-box border border-amber-300/30">
+            <button class="absolute top-4 right-4 text-white/40 hover:text-white transition-colors modal-close-btn">
+                <iconify-icon icon="lucide:x" class="text-xl"></iconify-icon>
+            </button>
+            <div class="flex items-center gap-2 mb-1">
+                <iconify-icon icon="lucide:sparkles" class="text-amber-300 text-2xl"></iconify-icon>
+                <h3 class="font-display text-3xl font-bold text-white">Ultra Premium Form</h3>
+            </div>
+            <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-amber-300 mb-2">Enterprise / Cinematic
+                Experience
+            </p>
+            <p class="text-sm text-white/50 mb-8">This form is elite and highly detailed. Designed for landmark
+                developments.
+            </p>
+
+            <form class="space-y-5">
+                <div class="grid grid-cols-2 gap-5">
+                    <div><label class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Full
+                            Name</label><input type="text"
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all"
+                            required></div>
+                    <div><label
+                            class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Company /
+                            Group
+                            Name</label><input type="text"
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all"
+                            required></div>
+                    <div><label
+                            class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Position /
+                            Role</label><input type="text"
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all">
+                    </div>
+                    <div><label class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Direct
+                            Contact
+                            Number</label><input type="tel"
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all"
+                            required></div>
+                    <div class="col-span-2"><label
+                            class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Business
+                            Email</label><input type="email"
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all"
+                            required></div>
+                </div>
+                <div class="grid grid-cols-2 gap-5">
+                    <div><label
+                            class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Project
+                            Name</label><input type="text"
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Total
+                            Project
+                            Area</label><input type="text"
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all"
+                            required></div>
+                </div>
+                <div class="grid grid-cols-2 gap-5">
+                    <div><label
+                            class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Project
+                            Category</label>
+                        <select
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all [&>option]:text-black"
+                            required>
+                            <option value="" disabled selected>Select category</option>
+                            <option>Luxury Villas</option>
+                            <option>Township</option>
+                            <option>High-Rise</option>
+                            <option>Commercial Landmark</option>
+                        </select>
+                    </div>
+                    <div><label
+                            class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Preferred
+                            Visual
+                            Style</label>
+                        <select
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all [&>option]:text-black"
+                            required>
+                            <option value="" disabled selected>Select style</option>
+                            <option>Cinematic</option>
+                            <option>Ultra Realistic</option>
+                            <option>Luxury Modern</option>
+                            <option>Architectural Minimal</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-2">Elite
+                        Features
+                        Needed</label>
+                    <div class="grid grid-cols-2 gap-3 text-sm text-white/70">
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded bg-black/50 border-white/20 text-amber-300 focus:ring-amber-300 focus:ring-offset-gray-900">
+                            Live Environment Simulation</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded bg-black/50 border-white/20 text-amber-300 focus:ring-amber-300 focus:ring-offset-gray-900">
+                            VR Experience</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded bg-black/50 border-white/20 text-amber-300 focus:ring-amber-300 focus:ring-offset-gray-900">
+                            AI Walkthrough</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded bg-black/50 border-white/20 text-amber-300 focus:ring-amber-300 focus:ring-offset-gray-900">
+                            Interactive Map + POI</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded bg-black/50 border-white/20 text-amber-300 focus:ring-amber-300 focus:ring-offset-gray-900">
+                            Investor Presentation Mode</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded bg-black/50 border-white/20 text-amber-300 focus:ring-amber-300 focus:ring-offset-gray-900">
+                            Multi-Language Support</label>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-5">
+                    <div><label
+                            class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Expected
+                            Project
+                            Launch</label><input type="date"
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all [&::-webkit-calendar-picker-indicator]:invert"
+                            required></div>
+                    <div><label
+                            class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Estimated
+                            Budget
+                            Range</label><input type="text"
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all"
+                            required></div>
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Upload
+                        Master Plans /
+                        Branding Assets</label>
+                    <input type="file" multiple
+                        class="w-full text-sm text-white/50 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-bold file:bg-white/10 file:text-amber-300 hover:file:bg-white/20 transition-all">
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Additional
+                        Technical
+                        Requirements</label>
+                    <textarea rows="2"
+                        class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all resize-none"></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full py-4 mt-4 bg-amber-300 text-black font-bold rounded-xl hover:bg-amber-400 transition-all duration-200 shadow-[0_0_20px_rgba(252,211,77,0.3)] text-sm uppercase tracking-[0.15em]">Schedule
+                    Ultra Premium Consultation</button>
+                <div
+                    class="flex items-center justify-center gap-4 text-[10px] font-bold uppercase tracking-[0.1em] text-white/40 mt-6 pt-4 border-t border-white/10">
+                    <span>Priority Response within 12 Hours</span>
+                    <span>&bull;</span>
+                    <span>Dedicated Project Consultation</span>
+                    <span>&bull;</span>
+                    <span>Confidential Project Handling</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accent: '#1a4d4d',
+                        'accent-light': '#245e5e',
+                        'accent-dark': '#0f3535',
+                        surface: '#F5F4EF',
+                        'surface-warm': '#EDEAE3',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Satoshi', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-display {
+            font-family: 'Clash Grotesk', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #c4c0b6;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9e9a90;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="min-h-screen bg-surface flex flex-col text-gray-900">
+
+        <!-- Navigation -->
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-surface border-b border-black/[0.06]">
+            <div class="max-w-7xl mx-auto px-8 h-16 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <div
+                        class="w-9 h-9 bg-accent rounded-lg flex items-center justify-center shadow-lg shadow-accent/20">
+                        <iconify-icon icon="lucide:layers" class="text-white text-lg"></iconify-icon>
+                    </div>
+                    <span class="font-display text-xl font-bold tracking-tight">ZENOVIZ STUDIOS</span>
+                </div>
+                <div class="flex items-center gap-8 text-sm font-semibold text-gray-500">
+                    <a href="index.html"
+                        class="hover:text-gray-900 transition-colors duration-200">Home</a>
+                    <a href="#" class="hover:text-gray-900 transition-colors duration-200">About Us</a>
+                    <a href="#" class="text-gray-900 transition-colors duration-200">Services</a>
+                    <a href="#" class="hover:text-gray-900 transition-colors duration-200">Projects</a>
+                    <a href="#" id="contact-btn" class="hover:text-gray-900 transition-colors duration-200">Contact
+                        Us</a>
+                    <button id="start-project-btn"
+                        class="px-6 py-2.5 bg-accent text-white rounded-lg hover:bg-accent-dark transition-all duration-200 shadow-lg shadow-accent/25 font-bold text-sm">Start
+                        a Project</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Services Hero Section -->
+        <section class="pt-40 pb-16 px-8 text-center">
+            <div class="max-w-3xl mx-auto space-y-6">
+                <h1 class="font-display text-5xl lg:text-7xl font-bold tracking-tight leading-[1.05]">
+                    Our Services.
+                </h1>
+                <p class="text-lg text-gray-500 leading-relaxed max-w-2xl mx-auto">
+                    Explore our four distinct tiers of architectural visualization, crafted meticulously from standard
+                    renders to
+                    ultra-premium cinematic VR experiences.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Details List -->
+        <section class="pb-24 px-8">
+
+            <!-- Standard Package -->
+            <div id="standard"
+                class="max-w-6xl mx-auto bg-white border border-black/[0.04] rounded-3xl p-10 lg:p-14 mb-16 shadow-sm flex flex-col lg:flex-row gap-12 lg:gap-20 scroll-mt-24">
+                <!-- Left: Overview & Actions -->
+                <div class="lg:w-1/3 flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 bg-surface-warm rounded-2xl flex items-center justify-center shrink-0">
+                            <iconify-icon icon="lucide:home" class="text-2xl text-accent"></iconify-icon>
+                        </div>
+                        <span
+                            class="text-[11px] font-bold uppercase tracking-[0.2em] text-accent/50 bg-accent/[0.05] px-3 py-1.5 rounded-md">Essential
+                            Tier</span>
+                    </div>
+                    <h2 class="font-display text-4xl font-bold tracking-tight mb-4">Standard Package</h2>
+                    <p class="text-gray-500 leading-relaxed text-sm mb-8">
+                        Perfect for small house builders and plot developers who need clean interior renders with a
+                        simple
+                        presentation setup — focused, efficient, and presentation-ready.
+                    </p>
+                    <div class="space-y-4 pt-6 border-t border-gray-100 mb-8">
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-500 font-medium">Timeline</span>
+                            <span class="font-bold text-gray-900">1–1.5 Weeks</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-500 font-medium">Revisions</span>
+                            <span class="font-bold text-gray-900">Not Included</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3 mt-auto">
+                        <button id="btn-standard"
+                            class="w-full py-3.5 rounded-xl font-bold text-sm bg-accent text-white hover:bg-accent-dark transition-all duration-200 shadow-md shadow-accent/20">Get
+                            This Package</button>
+                        <button
+                            class="w-full py-3.5 rounded-xl font-bold text-sm bg-white border-2 border-gray-100 text-gray-600 hover:border-gray-200 transition-all duration-200">View
+                            Samples</button>
+                    </div>
+                </div>
+
+                <!-- Right: Features Breakdown -->
+                <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-[0.15em] text-gray-900 mb-6">What’s Included
+                        </h4>
+                        <div class="space-y-5">
+                            <div>
+                                <span class="text-accent font-bold text-sm block mb-1">Renders</span>
+                                <p class="text-gray-500 text-sm leading-relaxed">High-quality interior-focused still
+                                    renders.</p>
+                            </div>
+                            <div>
+                                <span class="text-accent font-bold text-sm block mb-1">Views</span>
+                                <p class="text-gray-500 text-sm leading-relaxed">3 Interactive Isometric Views + 2D
+                                    Layout.</p>
+                            </div>
+                            <div>
+                                <span class="text-accent font-bold text-sm block mb-1">360° Images</span>
+                                <p class="text-gray-500 text-sm leading-relaxed">Immersive Interior Panorama Views.</p>
+                            </div>
+                            <div>
+                                <span class="text-accent font-bold text-sm block mb-1">UI Type</span>
+                                <p class="text-gray-500 text-sm leading-relaxed">Static Presentation Interface.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-[0.15em] text-gray-900 mb-6">Feature Checklist
+                        </h4>
+                        <ul class="space-y-3.5 mb-8">
+                            <li class="flex items-center gap-3 text-sm text-gray-700 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-emerald-500 text-base bg-emerald-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Interior
+                                Layout</li>
+                            <li class="flex items-center gap-3 text-sm text-gray-700 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-emerald-500 text-base bg-emerald-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Isometric
+                                Views</li>
+                            <li class="flex items-center gap-3 text-sm text-gray-700 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-emerald-500 text-base bg-emerald-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                2D Layout
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-gray-700 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-emerald-500 text-base bg-emerald-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                360°
+                                Interior Experience</li>
+                        </ul>
+                        <h4 class="text-xs font-bold uppercase tracking-[0.15em] text-gray-400 mb-6">Not Included</h4>
+                        <ul class="space-y-3.5">
+                            <li class="flex items-center gap-3 text-sm text-gray-400 font-medium"><iconify-icon
+                                    icon="lucide:x"
+                                    class="text-gray-400 text-base bg-gray-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Exterior
+                                Visuals (+₹30K Add-on)</li>
+                            <li class="flex items-center gap-3 text-sm text-gray-400 font-medium"><iconify-icon
+                                    icon="lucide:x"
+                                    class="text-gray-400 text-base bg-gray-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Walkthrough
+                                Animation</li>
+                            <li class="flex items-center gap-3 text-sm text-gray-400 font-medium"><iconify-icon
+                                    icon="lucide:x"
+                                    class="text-gray-400 text-base bg-gray-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                AI Features
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-gray-400 font-medium"><iconify-icon
+                                    icon="lucide:x"
+                                    class="text-gray-400 text-base bg-gray-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Revisions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deluxe Package -->
+            <div id="deluxe"
+                class="max-w-6xl mx-auto bg-white border border-black/[0.04] rounded-3xl p-10 lg:p-14 mb-16 shadow-sm flex flex-col lg:flex-row gap-12 lg:gap-20 scroll-mt-24">
+                <!-- Left: Overview & Actions -->
+                <div class="lg:w-1/3 flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 bg-surface-warm rounded-2xl flex items-center justify-center shrink-0">
+                            <iconify-icon icon="lucide:layout" class="text-2xl text-accent"></iconify-icon>
+                        </div>
+                        <span
+                            class="text-[11px] font-bold uppercase tracking-[0.2em] text-accent/50 bg-accent/[0.05] px-3 py-1.5 rounded-md">Growth
+                            Tier</span>
+                    </div>
+                    <h2 class="font-display text-4xl font-bold tracking-tight mb-4">Deluxe Package</h2>
+                    <p class="text-gray-500 leading-relaxed text-sm mb-8">
+                        Ideal for villa and apartment developers who need a complete interactive presentation experience
+                        — combining
+                        interior visuals, exterior 360° views, room-to-room navigation, and customizable UI templates.
+                    </p>
+                    <div class="space-y-4 pt-6 border-t border-gray-100 mb-8">
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-500 font-medium">Timeline</span>
+                            <span class="font-bold text-gray-900">3–4 Weeks</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-500 font-medium">Revisions</span>
+                            <span class="font-bold text-gray-900">Up to 5 Included</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3 mt-auto">
+                        <button id="btn-deluxe"
+                            class="w-full py-3.5 rounded-xl font-bold text-sm bg-accent text-white hover:bg-accent-dark transition-all duration-200 shadow-md shadow-accent/20">Get
+                            This Package</button>
+                        <button
+                            class="w-full py-3.5 rounded-xl font-bold text-sm bg-white border-2 border-gray-100 text-gray-600 hover:border-gray-200 transition-all duration-200">View
+                            Samples</button>
+                    </div>
+                </div>
+
+                <!-- Right: Features Breakdown -->
+                <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-[0.15em] text-gray-900 mb-6">What’s Included
+                        </h4>
+                        <div class="space-y-5">
+                            <div>
+                                <span class="text-accent font-bold text-sm block mb-1">Interior + Exterior</span>
+                                <p class="text-gray-500 text-sm leading-relaxed">Complete interior renders with
+                                    immersive exterior 360°
+                                    views.</p>
+                            </div>
+                            <div>
+                                <span class="text-accent font-bold text-sm block mb-1">Views</span>
+                                <p class="text-gray-500 text-sm leading-relaxed">Interactive 3D Isometric Views + 2D
+                                    Layout.</p>
+                            </div>
+                            <div>
+                                <span class="text-accent font-bold text-sm block mb-1">Navigation</span>
+                                <p class="text-gray-500 text-sm leading-relaxed">Smooth room-to-room virtual navigation.
+                                </p>
+                            </div>
+                            <div>
+                                <span class="text-accent font-bold text-sm block mb-1">3D Visualisation</span>
+                                <p class="text-gray-500 text-sm leading-relaxed">Customizable flooring and wall color
+                                    options.</p>
+                            </div>
+                            <div>
+                                <span class="text-accent font-bold text-sm block mb-1">UI / UX</span>
+                                <p class="text-gray-500 text-sm leading-relaxed">Choose from 3–4 professionally designed
+                                    UI templates.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-[0.15em] text-gray-900 mb-6">Feature Checklist
+                        </h4>
+                        <ul class="space-y-3.5 mb-8">
+                            <li class="flex items-center gap-3 text-sm text-gray-700 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-emerald-500 text-base bg-emerald-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Complete
+                                Interior Experience</li>
+                            <li class="flex items-center gap-3 text-sm text-gray-700 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-emerald-500 text-base bg-emerald-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Exterior
+                                360° Views</li>
+                            <li class="flex items-center gap-3 text-sm text-gray-700 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-emerald-500 text-base bg-emerald-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                3D
+                                Isometric Views</li>
+                            <li class="flex items-center gap-3 text-sm text-gray-700 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-emerald-500 text-base bg-emerald-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Custom
+                                Floor & Wall Options</li>
+                            <li class="flex items-center gap-3 text-sm text-gray-700 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-emerald-500 text-base bg-emerald-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Room-to-Room Navigation</li>
+                            <li class="flex items-center gap-3 text-sm text-gray-700 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-emerald-500 text-base bg-emerald-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                UI
+                                Templates (3–4 Options)</li>
+                        </ul>
+                        <h4 class="text-xs font-bold uppercase tracking-[0.15em] text-gray-400 mb-6">Not Included</h4>
+                        <ul class="space-y-3.5">
+                            <li class="flex items-center gap-3 text-sm text-gray-400 font-medium"><iconify-icon
+                                    icon="lucide:x"
+                                    class="text-gray-400 text-base bg-gray-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Walkthrough
+                                Animation</li>
+                            <li class="flex items-center gap-3 text-sm text-gray-400 font-medium"><iconify-icon
+                                    icon="lucide:x"
+                                    class="text-gray-400 text-base bg-gray-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                AI Features
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium Package -->
+            <div id="premium"
+                class="max-w-6xl mx-auto bg-white border border-black/[0.04] rounded-3xl p-10 lg:p-14 mb-16 shadow-sm flex flex-col lg:flex-row gap-12 lg:gap-20 scroll-mt-24">
+                <!-- Left: Overview & Actions -->
+                <div class="lg:w-1/3 flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 bg-surface-warm rounded-2xl flex items-center justify-center shrink-0">
+                            <iconify-icon icon="lucide:crown" class="text-2xl text-accent"></iconify-icon>
+                        </div>
+                        <span
+                            class="text-[11px] font-bold uppercase tracking-[0.2em] text-accent/50 bg-accent/[0.05] px-3 py-1.5 rounded-md">Luxury
+                            Tier</span>
+                    </div>
+                    <h2 class="font-display text-4xl font-bold tracking-tight mb-4">Premium Package</h2>
+                    <p class="text-gray-500 leading-relaxed text-sm mb-8">
+                        Perfect for premium villas and boutique apartment projects that require a high-end interactive
+                        presentation
+                        experience — featuring multi-BHK layouts, aerial visualisation, custom UI design, advanced
+                        customization,
+                        and optional AI integration.
+                    </p>
+                    <div class="space-y-4 pt-6 border-t border-gray-100 mb-8">
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-500 font-medium">Best For</span>
+                            <span class="font-bold text-gray-900">Pre-Construction Marketing</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-500 font-medium">Timeline</span>
+                            <span class="font-bold text-gray-900">4–6 Weeks+</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-500 font-medium">Revisions</span>
+                            <span class="font-bold text-gray-900">Up to 15 Included</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3 mt-auto">
+                        <button id="btn-premium"
+                            class="w-full py-3.5 rounded-xl font-bold text-sm bg-accent text-white hover:bg-accent-dark transition-all duration-200 shadow-md shadow-accent/20">Get
+                            This Package</button>
+                        <button
+                            class="w-full py-3.5 rounded-xl font-bold text-sm bg-white border-2 border-gray-100 text-gray-600 hover:border-gray-200 transition-all duration-200">View
+                            Samples</button>
+                    </div>
+                </div>
+
+                <!-- Right: Features Breakdown -->
+                <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-[0.15em] text-gray-900 mb-6">What’s Included
+                        </h4>
+                        <div class="space-y-5">
+                            <div>
+                                <span class="text-accent font-bold text-sm block mb-1">Plans</span>
+                                <p class="text-gray-500 text-sm leading-relaxed">1BHK, 2BHK & 3BHK Interactive Isometric
+                                    + 2D Layouts.
+                                </p>
+                            </div>
+                            <div>
+                                <span class="text-accent font-bold text-sm block mb-1">Aerial Visualisation</span>
+                                <p class="text-gray-500 text-sm leading-relaxed">Detailed township and project aerial
+                                    views.</p>
+                            </div>
+                            <div>
+                                <span class="text-accent font-bold text-sm block mb-1">3D Customisation</span>
+                                <p class="text-gray-500 text-sm leading-relaxed">Preset-based customization for wall
+                                    paints, flooring,
+                                    sofas, dining tables, beds, and more — with immersive 360° renders.</p>
+                            </div>
+                            <div>
+                                <span class="text-accent font-bold text-sm block mb-1">Lighting Modes</span>
+                                <p class="text-gray-500 text-sm leading-relaxed">Switch seamlessly between Day Mode and
+                                    Night Mode.</p>
+                            </div>
+                            <div>
+                                <span class="text-accent font-bold text-sm block mb-1">Custom UI / UX</span>
+                                <p class="text-gray-500 text-sm leading-relaxed">Fully custom-designed Figma interface
+                                    tailored to your
+                                    project branding.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-[0.15em] text-gray-900 mb-6">Feature Checklist
+                        </h4>
+                        <ul class="space-y-3.5">
+                            <li class="flex items-center gap-3 text-sm text-gray-700 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-emerald-500 text-base bg-emerald-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Multi-BHK
+                                Plan Support</li>
+                            <li class="flex items-center gap-3 text-sm text-gray-700 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-emerald-500 text-base bg-emerald-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                360°
+                                Render Experience</li>
+                            <li class="flex items-center gap-3 text-sm text-gray-700 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-emerald-500 text-base bg-emerald-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Aerial
+                                Township Views</li>
+                            <li class="flex items-center gap-3 text-sm text-gray-700 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-emerald-500 text-base bg-emerald-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Day &
+                                Night Lighting Modes</li>
+                            <li class="flex items-center gap-3 text-sm text-gray-700 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-emerald-500 text-base bg-emerald-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Custom
+                                Figma UI Design</li>
+                            <li class="flex items-center gap-3 text-sm text-gray-700 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-emerald-500 text-base bg-emerald-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Basic
+                                Walkthrough Experience</li>
+                            <li class="flex items-center gap-3 text-sm text-gray-700 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-emerald-500 text-base bg-emerald-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Promotional Video Footage</li>
+                            <li class="flex items-center gap-3 text-sm text-gray-700 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-emerald-500 text-base bg-emerald-50 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Optional
+                                AI Chatbot Integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ultra Premium Package -->
+            <div id="ultra-premium"
+                class="max-w-6xl mx-auto bg-accent text-white border border-accent-light rounded-3xl p-10 lg:p-14 shadow-2xl shadow-accent/20 flex flex-col lg:flex-row gap-12 lg:gap-20 scroll-mt-24">
+                <!-- Left: Overview & Actions -->
+                <div class="lg:w-1/3 flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div
+                            class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center shrink-0 backdrop-blur-sm">
+                            <iconify-icon icon="lucide:sparkles" class="text-2xl text-amber-300"></iconify-icon>
+                        </div>
+                        <span
+                            class="text-[11px] font-bold uppercase tracking-[0.2em] text-amber-300/80 bg-amber-300/10 px-3 py-1.5 rounded-md">Signature
+                            Tier</span>
+                    </div>
+                    <h2 class="font-display text-4xl font-bold tracking-tight mb-4">Ultra Premium</h2>
+                    <p class="text-white/60 leading-relaxed text-sm mb-8">
+                        Designed for landmark luxury developments and cinematic real-estate experiences — combining
+                        immersive
+                        environments, AI-powered interaction, VR integration, live surroundings, and presentation
+                        quality built to
+                        impress investors and buyers alike.
+                    </p>
+                    <div class="space-y-4 pt-6 border-t border-white/10 mb-8">
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-white/50 font-medium">Best For</span>
+                            <span class="font-bold text-white">Luxury & Signature Projects</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-white/50 font-medium">Timeline</span>
+                            <span class="font-bold text-white">6–9 Weeks+</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-white/50 font-medium">Revisions</span>
+                            <span class="font-bold text-white">Unlimited</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3 mt-auto">
+                        <button id="btn-ultra"
+                            class="w-full py-3.5 rounded-xl font-bold text-sm bg-amber-300 text-accent hover:bg-amber-400 transition-all duration-200 shadow-md shadow-black/10">Get
+                            This Package</button>
+                        <button
+                            class="w-full py-3.5 rounded-xl font-bold text-sm bg-transparent border-2 border-white/20 text-white hover:bg-white/5 transition-all duration-200">View
+                            Samples</button>
+                    </div>
+                </div>
+
+                <!-- Right: Features Breakdown -->
+                <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-[0.15em] text-white/80 mb-6">What’s Included
+                        </h4>
+                        <div class="space-y-5">
+                            <div>
+                                <span class="text-amber-300 font-bold text-sm block mb-1">Cinematic Quality</span>
+                                <p class="text-white/60 text-sm leading-relaxed">Ultra-detailed cinematic visualisation
+                                    with premium
+                                    environmental realism.</p>
+                            </div>
+                            <div>
+                                <span class="text-amber-300 font-bold text-sm block mb-1">Live Environment</span>
+                                <p class="text-white/60 text-sm leading-relaxed">Dynamic roads with moving vehicles,
+                                    pedestrians, and
+                                    realistic surroundings.</p>
+                            </div>
+                            <div>
+                                <span class="text-amber-300 font-bold text-sm block mb-1">AI + Walkthrough</span>
+                                <p class="text-white/60 text-sm leading-relaxed">Full interactive walkthrough experience
+                                    with AI-powered
+                                    assistance and chatbot integration.</p>
+                            </div>
+                            <div>
+                                <span class="text-amber-300 font-bold text-sm block mb-1">VR Experience</span>
+                                <p class="text-white/60 text-sm leading-relaxed">Immersive Virtual Reality compatibility
+                                    included.</p>
+                            </div>
+                            <div>
+                                <span class="text-amber-300 font-bold text-sm block mb-1">Map & POI Integration</span>
+                                <p class="text-white/60 text-sm leading-relaxed">Interactive map view with nearby
+                                    hotels, hospitals,
+                                    landmarks, and important locations.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-[0.15em] text-white/80 mb-6">Feature Checklist
+                        </h4>
+                        <ul class="space-y-3.5">
+                            <li class="flex items-center gap-3 text-sm text-white/90 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-amber-300 text-base bg-amber-300/10 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Cinematic
+                                Visual Quality</li>
+                            <li class="flex items-center gap-3 text-sm text-white/90 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-amber-300 text-base bg-amber-300/10 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Day &
+                                Night Experience Modes</li>
+                            <li class="flex items-center gap-3 text-sm text-white/90 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-amber-300 text-base bg-amber-300/10 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Live
+                                Pedestrian & Vehicle Simulation</li>
+                            <li class="flex items-center gap-3 text-sm text-white/90 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-amber-300 text-base bg-amber-300/10 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Full AI
+                                Integration + Chatbot</li>
+                            <li class="flex items-center gap-3 text-sm text-white/90 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-amber-300 text-base bg-amber-300/10 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                VR
+                                Compatibility</li>
+                            <li class="flex items-center gap-3 text-sm text-white/90 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-amber-300 text-base bg-amber-300/10 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Interactive Map + POI View</li>
+                            <li class="flex items-center gap-3 text-sm text-white/90 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-amber-300 text-base bg-amber-300/10 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Video &
+                                Media Integration</li>
+                            <li class="flex items-center gap-3 text-sm text-white/90 font-medium"><iconify-icon
+                                    icon="lucide:check"
+                                    class="text-amber-300 text-base bg-amber-300/10 rounded-full p-0.5 shrink-0"></iconify-icon>
+                                Unlimited
+                                Revisions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-10 px-8 border-t border-black/[0.04]">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <div class="w-6 h-6 bg-gray-200 rounded-md flex items-center justify-center">
+                        <iconify-icon icon="lucide:layers" class="text-gray-400 text-xs"></iconify-icon>
+                    </div>
+                    <span class="font-display text-sm font-bold tracking-tight text-gray-400">STUDIO.ARCH</span>
+                </div>
+                <p class="text-gray-400 text-xs">&copy; 2024 Architectural Visualization Studio. All rights reserved.
+                </p>
+                <div class="flex gap-5">
+                    <a href="#" class="text-gray-400 hover:text-gray-700 transition-colors"><iconify-icon
+                            icon="lucide:twitter" class="text-base"></iconify-icon></a>
+                    <a href="#" class="text-gray-400 hover:text-gray-700 transition-colors"><iconify-icon
+                            icon="lucide:instagram" class="text-base"></iconify-icon></a>
+                    <a href="#" class="text-gray-400 hover:text-gray-700 transition-colors"><iconify-icon
+                            icon="lucide:linkedin" class="text-base"></iconify-icon></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Project Modal -->
+    <div id="project-modal"
+        class="fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="absolute inset-0 bg-gray-900/40 backdrop-blur-sm" id="modal-backdrop"></div>
+        <div class="relative bg-white w-full max-w-lg rounded-2xl shadow-2xl p-8 transform scale-95 transition-transform duration-300"
+            id="modal-content">
+            <button id="close-modal-btn"
+                class="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors">
+                <iconify-icon icon="lucide:x" class="text-xl"></iconify-icon>
+            </button>
+            <h3 class="font-display text-2xl font-bold mb-1">Start Your Project</h3>
+            <p class="text-sm text-gray-500 mb-6">Tell us about your requirements, and we'll get back to you.</p>
+
+            <form class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">Full
+                            Name</label>
+                        <input type="text"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">Company
+                            /
+                            Builder</label>
+                        <input type="text"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">Phone
+                            Number</label>
+                        <input type="tel"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">Email
+                            Address</label>
+                        <input type="email"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">Project
+                            Type</label>
+                        <select
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required>
+                            <option value="" disabled selected>Select type</option>
+                            <option>Villa Project</option>
+                            <option>Apartment Project</option>
+                            <option>Township</option>
+                            <option>Commercial</option>
+                            <option>Plot Layout</option>
+                            <option>Interior Presentation</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">Project
+                            Stage</label>
+                        <select
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required>
+                            <option value="" disabled selected>Select stage</option>
+                            <option>Concept Stage</option>
+                            <option>Pre-Construction</option>
+                            <option>Under Construction</option>
+                            <option>Ready to Launch</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">Required
+                        Package</label>
+                    <select
+                        class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                        required>
+                        <option value="" disabled selected>Select package</option>
+                        <option>Standard</option>
+                        <option>Deluxe</option>
+                        <option>Premium</option>
+                        <option>Ultra Premium</option>
+                        <option>Not Sure Yet</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">Tell Us
+                        About Your
+                        Project</label>
+                    <textarea rows="3"
+                        class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all resize-none"
+                        placeholder="Share your project details, goals, required features, and any references you have."
+                        required></textarea>
+                </div>
+
+                <button type="submit"
+                    class="w-full py-3 mt-2 bg-accent text-white font-bold rounded-xl hover:bg-accent-dark transition-all duration-200 shadow-lg shadow-accent/25 text-sm">Submit
+                    Request</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Standard Modal -->
+    <div id="modal-standard"
+        class="fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="absolute inset-0 bg-gray-900/40 backdrop-blur-sm modal-bg-close"></div>
+        <div
+            class="relative bg-white w-full max-w-lg rounded-2xl shadow-2xl p-8 transform scale-95 transition-transform duration-300 overflow-y-auto max-h-[90vh] modal-content-box">
+            <button class="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors modal-close-btn">
+                <iconify-icon icon="lucide:x" class="text-xl"></iconify-icon>
+            </button>
+            <h3 class="font-display text-2xl font-bold mb-1">Standard Package Form</h3>
+            <p class="text-[11px] font-bold uppercase tracking-wider text-accent mb-2">Simple & Fast Lead Capture</p>
+            <p class="text-sm text-gray-500 mb-6">Best for smaller builders who want quick communication.</p>
+
+            <form class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Full
+                            Name</label><input type="text"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Company
+                            Name</label><input type="text"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Phone
+                            Number</label><input type="tel"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Email
+                            Address</label><input type="email"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Project
+                            Location</label><input type="text"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Number of
+                            Rooms</label><input type="number"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Property Type</label>
+                        <select
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required>
+                            <option value="" disabled selected>Select</option>
+                            <option>Villa</option>
+                            <option>Small Apartment</option>
+                            <option>Plot Layout</option>
+                            <option>Interior Only</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Need Exterior
+                            Add-on?</label>
+                        <select
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required>
+                            <option value="" disabled selected>Select</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Upload Floor Plan</label>
+                    <input type="file"
+                        class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-bold file:bg-surface-warm file:text-accent hover:file:bg-surface-warm/80">
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Additional Notes</label>
+                    <textarea rows="2"
+                        class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all resize-none"></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full py-3 mt-2 bg-accent text-white font-bold rounded-xl hover:bg-accent-dark transition-all duration-200 shadow-lg shadow-accent/25 text-sm">Get
+                    My Presentation Started</button>
+                <p class="text-[11px] font-bold text-center text-gray-400 mt-3">Ideal for fast-moving projects with
+                    essential
+                    presentation needs.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Deluxe Modal -->
+    <div id="modal-deluxe"
+        class="fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="absolute inset-0 bg-gray-900/50 backdrop-blur-md modal-bg-close"></div>
+        <div
+            class="relative bg-white w-full max-w-lg rounded-2xl shadow-2xl p-8 transform scale-95 transition-transform duration-300 overflow-y-auto max-h-[90vh] modal-content-box border-t-4 border-accent">
+            <button class="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors modal-close-btn">
+                <iconify-icon icon="lucide:x" class="text-xl"></iconify-icon>
+            </button>
+            <h3 class="font-display text-2xl font-bold mb-1">Deluxe Package Form</h3>
+            <p class="text-[11px] font-bold uppercase tracking-wider text-accent mb-2">Interactive Experience Focus</p>
+            <p class="text-sm text-gray-500 mb-6">This form should feel more premium and feature-oriented.</p>
+
+            <form class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Full
+                            Name</label><input type="text"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Company / Developer
+                            Name</label><input type="text"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Contact
+                            Number</label><input type="tel"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Email
+                            Address</label><input type="email"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                </div>
+                <div class="grid grid-cols-3 gap-4">
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Project
+                            Type</label><input type="text"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Number of
+                            Floors</label><input type="number"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Total Units /
+                            Villas</label><input type="number"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Required Features</label>
+                    <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded text-accent focus:ring-accent">
+                            Exterior 360°</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded text-accent focus:ring-accent">
+                            Room Navigation</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded text-accent focus:ring-accent">
+                            Custom Flooring</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded text-accent focus:ring-accent">
+                            Wall Customization</label>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Preferred UI
+                            Style</label>
+                        <select
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required>
+                            <option value="" disabled selected>Select style</option>
+                            <option>Minimal</option>
+                            <option>Luxury</option>
+                            <option>Dark</option>
+                            <option>Modern</option>
+                        </select>
+                    </div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Expected Delivery
+                            Timeline</label><input type="text"
+                            class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Upload Plans / CAD
+                        Files</label>
+                    <input type="file"
+                        class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-bold file:bg-surface-warm file:text-accent hover:file:bg-surface-warm/80">
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Additional
+                        Requirements</label>
+                    <textarea rows="2"
+                        class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all resize-none"></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full py-3 mt-2 bg-accent text-white font-bold rounded-xl hover:bg-accent-dark transition-all duration-200 shadow-lg shadow-accent/25 text-sm">Build
+                    My Interactive Experience</button>
+                <p class="text-[11px] font-bold text-center text-accent/70 mt-3 uppercase tracking-widest">Step 1 of 2 —
+                    Project
+                    Details</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Premium Modal -->
+    <div id="modal-premium"
+        class="fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-md modal-bg-close"></div>
+        <div
+            class="relative bg-gray-50 w-full max-w-xl rounded-2xl shadow-2xl p-8 transform scale-95 transition-transform duration-300 overflow-y-auto max-h-[90vh] modal-content-box border border-black/10">
+            <button class="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors modal-close-btn">
+                <iconify-icon icon="lucide:x" class="text-xl"></iconify-icon>
+            </button>
+            <div class="flex items-center gap-2 mb-1">
+                <iconify-icon icon="lucide:crown" class="text-accent text-xl"></iconify-icon>
+                <h3 class="font-display text-2xl font-bold">Premium Package Form</h3>
+            </div>
+            <p class="text-[11px] font-bold uppercase tracking-wider text-accent mb-2">Luxury + Pre-Construction Sales
+                Focus
+            </p>
+            <p class="text-sm text-gray-500 mb-6">This should feel high-end and consultation-based.</p>
+
+            <form class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Full
+                            Name</label><input type="text"
+                            class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Company
+                            Name</label><input type="text"
+                            class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label
+                            class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Designation</label><input
+                            type="text"
+                            class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all">
+                    </div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Phone
+                            Number</label><input type="tel"
+                            class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div class="col-span-2"><label
+                            class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Email
+                            Address</label><input type="email"
+                            class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Project
+                            Name</label><input type="text"
+                            class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Number of BHK
+                            Variants</label><input type="text"
+                            class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required></div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Project Scale</label>
+                        <select
+                            class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required>
+                            <option value="" disabled selected>Select scale</option>
+                            <option>Villas</option>
+                            <option>Apartments</option>
+                            <option>Township</option>
+                            <option>Mixed Use</option>
+                        </select>
+                    </div>
+                    <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Preferred Branding
+                            Style</label>
+                        <select
+                            class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                            required>
+                            <option value="" disabled selected>Select style</option>
+                            <option>Luxury</option>
+                            <option>Corporate</option>
+                            <option>Modern</option>
+                            <option>Minimal</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-500 uppercase mb-2">Project Features
+                        Needed</label>
+                    <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded text-accent focus:ring-accent">
+                            Need Aerial View?</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded text-accent focus:ring-accent">
+                            Need Day/Night Mode?</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded text-accent focus:ring-accent">
+                            Need Custom Figma UI?</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded text-accent focus:ring-accent">
+                            Need Video Footage?</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded text-accent focus:ring-accent">
+                            Need AI Chatbot?</label>
+                    </div>
+                </div>
+                <div><label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Expected Launch
+                        Date</label><input type="date"
+                        class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
+                        required></div>
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Upload Branding / Floor
+                        Plans /
+                        References</label>
+                    <input type="file" multiple
+                        class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-bold file:bg-surface-warm file:text-accent hover:file:bg-surface-warm/80">
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-gray-500 uppercase mb-1.5">Describe Your
+                        Vision</label>
+                    <textarea rows="2"
+                        class="w-full px-3 py-2 bg-white border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all resize-none"
+                        required></textarea>
+                </div>
+                <p class="text-sm font-semibold text-center text-accent/80 mt-2 mb-2 italic">Your project deserves a
+                    presentation experience that sells before construction begins.</p>
+                <button type="submit"
+                    class="w-full py-4 mt-2 bg-accent text-white font-bold rounded-xl hover:bg-accent-dark transition-all duration-200 shadow-xl shadow-accent/25 text-sm uppercase tracking-wider">Request
+                    Premium Consultation</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Ultra Premium Modal -->
+    <div id="modal-ultra"
+        class="fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-lg modal-bg-close"></div>
+        <div
+            class="relative bg-[#111] text-white w-full max-w-2xl rounded-2xl shadow-2xl p-8 transform scale-95 transition-transform duration-300 overflow-y-auto max-h-[90vh] modal-content-box border border-amber-300/30">
+            <button class="absolute top-4 right-4 text-white/40 hover:text-white transition-colors modal-close-btn">
+                <iconify-icon icon="lucide:x" class="text-xl"></iconify-icon>
+            </button>
+            <div class="flex items-center gap-2 mb-1">
+                <iconify-icon icon="lucide:sparkles" class="text-amber-300 text-2xl"></iconify-icon>
+                <h3 class="font-display text-3xl font-bold text-white">Ultra Premium Form</h3>
+            </div>
+            <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-amber-300 mb-2">Enterprise / Cinematic
+                Experience
+            </p>
+            <p class="text-sm text-white/50 mb-8">This form is elite and highly detailed. Designed for landmark
+                developments.
+            </p>
+
+            <form class="space-y-5">
+                <div class="grid grid-cols-2 gap-5">
+                    <div><label class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Full
+                            Name</label><input type="text"
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all"
+                            required></div>
+                    <div><label
+                            class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Company /
+                            Group
+                            Name</label><input type="text"
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all"
+                            required></div>
+                    <div><label
+                            class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Position /
+                            Role</label><input type="text"
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all">
+                    </div>
+                    <div><label class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Direct
+                            Contact
+                            Number</label><input type="tel"
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all"
+                            required></div>
+                    <div class="col-span-2"><label
+                            class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Business
+                            Email</label><input type="email"
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all"
+                            required></div>
+                </div>
+                <div class="grid grid-cols-2 gap-5">
+                    <div><label
+                            class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Project
+                            Name</label><input type="text"
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all"
+                            required></div>
+                    <div><label class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Total
+                            Project
+                            Area</label><input type="text"
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all"
+                            required></div>
+                </div>
+                <div class="grid grid-cols-2 gap-5">
+                    <div><label
+                            class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Project
+                            Category</label>
+                        <select
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all [&>option]:text-black"
+                            required>
+                            <option value="" disabled selected>Select category</option>
+                            <option>Luxury Villas</option>
+                            <option>Township</option>
+                            <option>High-Rise</option>
+                            <option>Commercial Landmark</option>
+                        </select>
+                    </div>
+                    <div><label
+                            class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Preferred
+                            Visual
+                            Style</label>
+                        <select
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all [&>option]:text-black"
+                            required>
+                            <option value="" disabled selected>Select style</option>
+                            <option>Cinematic</option>
+                            <option>Ultra Realistic</option>
+                            <option>Luxury Modern</option>
+                            <option>Architectural Minimal</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-2">Elite
+                        Features
+                        Needed</label>
+                    <div class="grid grid-cols-2 gap-3 text-sm text-white/70">
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded bg-black/50 border-white/20 text-amber-300 focus:ring-amber-300 focus:ring-offset-gray-900">
+                            Live Environment Simulation</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded bg-black/50 border-white/20 text-amber-300 focus:ring-amber-300 focus:ring-offset-gray-900">
+                            VR Experience</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded bg-black/50 border-white/20 text-amber-300 focus:ring-amber-300 focus:ring-offset-gray-900">
+                            AI Walkthrough</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded bg-black/50 border-white/20 text-amber-300 focus:ring-amber-300 focus:ring-offset-gray-900">
+                            Interactive Map + POI</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded bg-black/50 border-white/20 text-amber-300 focus:ring-amber-300 focus:ring-offset-gray-900">
+                            Investor Presentation Mode</label>
+                        <label class="flex items-center gap-2"><input type="checkbox"
+                                class="rounded bg-black/50 border-white/20 text-amber-300 focus:ring-amber-300 focus:ring-offset-gray-900">
+                            Multi-Language Support</label>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-5">
+                    <div><label
+                            class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Expected
+                            Project
+                            Launch</label><input type="date"
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all [&::-webkit-calendar-picker-indicator]:invert"
+                            required></div>
+                    <div><label
+                            class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Estimated
+                            Budget
+                            Range</label><input type="text"
+                            class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all"
+                            required></div>
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Upload
+                        Master Plans /
+                        Branding Assets</label>
+                    <input type="file" multiple
+                        class="w-full text-sm text-white/50 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-bold file:bg-white/10 file:text-amber-300 hover:file:bg-white/20 transition-all">
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold text-white/50 uppercase tracking-wider mb-1.5">Additional
+                        Technical
+                        Requirements</label>
+                    <textarea rows="2"
+                        class="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:border-amber-300/50 focus:ring-1 focus:ring-amber-300/50 transition-all resize-none"></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full py-4 mt-4 bg-amber-300 text-black font-bold rounded-xl hover:bg-amber-400 transition-all duration-200 shadow-[0_0_20px_rgba(252,211,77,0.3)] text-sm uppercase tracking-[0.15em]">Schedule
+                    Ultra Premium Consultation</button>
+                <div
+                    class="flex items-center justify-center gap-4 text-[10px] font-bold uppercase tracking-[0.1em] text-white/40 mt-6 pt-4 border-t border-white/10">
+                    <span>Priority Response within 12 Hours</span>
+                    <span>&bull;</span>
+                    <span>Dedicated Project Consultation</span>
+                    <span>&bull;</span>
+                    <span>Confidential Project Handling</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contact Us Modal -->
+    <div id="contact-modal"
+        class="fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="absolute inset-0 bg-gray-900/40 backdrop-blur-sm modal-bg-close" id="contact-backdrop"></div>
+        <div class="relative bg-white w-full max-w-2xl rounded-2xl shadow-2xl p-8 transform scale-95 transition-transform duration-300 flex flex-col md:flex-row gap-8 modal-content-box"
+            id="contact-content">
+            <button id="close-contact-btn"
+                class="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors z-10 modal-close-btn">
+                <iconify-icon icon="lucide:x" class="text-xl"></iconify-icon>
+            </button>
+
+            <!-- Contact Info -->
+            <div class="w-full md:w-1/2 space-y-6">
+                <div>
+                    <h3 class="font-display text-2xl font-bold mb-1">Get in Touch</h3>
+                    <p class="text-sm text-gray-500">We'd love to hear from you. Here are our contact details.</p>
+                </div>
+
+                <div class="space-y-4 text-sm">
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center shrink-0">
+                            <iconify-icon icon="lucide:phone" class="text-accent text-lg"></iconify-icon>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Phone / WhatsApp</p>
+                            <p class="text-gray-600">+91 - 8008687745</p>
+                            <p class="text-gray-600">+91 - 8367019792</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center shrink-0">
+                            <iconify-icon icon="lucide:mail" class="text-accent text-lg"></iconify-icon>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Email Address</p>
+                            <a href="mailto:nihalpusthe516@gmail.com"
+                                class="text-gray-600 hover:text-accent transition-colors">nihalpusthe516@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center shrink-0">
+                            <iconify-icon icon="lucide:linkedin" class="text-accent text-lg"></iconify-icon>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">LinkedIn</p>
+                            <a href="https://linkedin.com/company/zenoviz-studios" target="_blank"
+                                class="text-gray-600 hover:text-accent transition-colors underline">linkedin.com/company/zenoviz-studios</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Preview -->
+            <div
+                class="w-full md:w-1/2 flex flex-col rounded-xl overflow-hidden shadow-inner border border-gray-100 bg-gray-50">
+                <iframe src="https://maps.google.com/maps?q=Hyderabad&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%"
+                    class="flex-1" style="border:0; min-height: 250px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div class="p-3 bg-white border-t border-gray-100 flex items-center justify-between">
+                    <span class="text-xs font-bold text-gray-500">ZENOVIZ STUDIOS</span>
+                    <a href="https://maps.app.goo.gl/GMGTkyPWVwkD538b6" target="_blank"
+                        class="text-[10px] uppercase tracking-wider font-bold text-accent hover:underline flex items-center gap-1">Open
+                        in Maps <iconify-icon icon="lucide:external-link"></iconify-icon></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // General Project Modal Logic
+        const initModal = (modalId, btnId) => {
+            const modal = document.getElementById(modalId);
+            const btn = document.getElementById(btnId);
+            if (!modal || !btn) return;
+
+            const modalContent = modal.querySelector('.modal-content-box') || document.getElementById('modal-content');
+            const closeBtns = modal.querySelectorAll('.modal-close-btn, #close-modal-btn');
+            const backdrop = modal.querySelector('.modal-bg-close') || document.getElementById('modal-backdrop');
+
+            const openModal = (e) => {
+                e.preventDefault();
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                if (modalContent) {
+                    modalContent.classList.remove('scale-95');
+                    modalContent.classList.add('scale-100');
+                }
+            };
+
+            const closeModal = () => {
+                modal.classList.add('opacity-0', 'pointer-events-none');
+                if (modalContent) {
+                    modalContent.classList.remove('scale-100');
+                    modalContent.classList.add('scale-95');
+                }
+            };
+
+            btn.addEventListener('click', openModal);
+            closeBtns.forEach(b => b.addEventListener('click', closeModal));
+            if (backdrop) backdrop.addEventListener('click', closeModal);
+        };
+
+        initModal('project-modal', 'start-project-btn');
+        initModal('modal-standard', 'btn-standard');
+        initModal('modal-deluxe', 'btn-deluxe');
+        initModal('modal-premium', 'btn-premium');
+        initModal('modal-ultra', 'btn-ultra');
+        initModal('contact-modal', 'contact-btn');
+    </script>
+</body>
+
+</html>
