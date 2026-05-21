@@ -774,16 +774,65 @@
                         </p>
                     </div>
                     <div class="flex flex-col gap-3 shrink-0">
-                        <a href="#"
+                        <button id="cta-start-btn"
                             class="px-10 py-4 bg-white text-accent font-bold rounded-xl hover:bg-gray-50 transition-all duration-200 flex items-center justify-center gap-2 shadow-xl shadow-black/10 text-sm">
                             Get Started Now
                             <iconify-icon icon="lucide:arrow-right"></iconify-icon>
-                        </a>
+                        </button>
                         <button id="talk-expert-btn"
                             class="px-10 py-4 bg-transparent border border-white/15 text-white font-bold rounded-xl hover:bg-white/5 transition-all duration-200 text-center text-sm">
                             Talk to an Expert
                         </button>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thank You Section -->
+        <section class="py-20 px-8 bg-surface-warm/30">
+            <div class="max-w-7xl mx-auto text-center space-y-8">
+                <div class="space-y-4">
+                    <h2 class="font-display text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1]">
+                        Thank You for<br />
+                        <span class="text-accent">All the Services</span>
+                    </h2>
+                    <p class="text-gray-500 leading-relaxed text-lg max-w-2xl mx-auto">
+                        From concept to delivery, we're committed to bringing your architectural vision to life with precision, creativity, and innovation.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <div class="space-y-3 p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
+                        <div class="w-14 h-14 mx-auto bg-accent/10 rounded-xl flex items-center justify-center">
+                            <iconify-icon icon="lucide:zap" class="text-2xl text-accent"></iconify-icon>
+                        </div>
+                        <h3 class="font-display text-lg font-bold tracking-tight">Fast Turnaround</h3>
+                        <p class="text-gray-500 text-sm">Quality deliverables without compromising on timelines or creative vision.</p>
+                    </div>
+                    
+                    <div class="space-y-3 p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
+                        <div class="w-14 h-14 mx-auto bg-accent/10 rounded-xl flex items-center justify-center">
+                            <iconify-icon icon="lucide:target" class="text-2xl text-accent"></iconify-icon>
+                        </div>
+                        <h3 class="font-display text-lg font-bold tracking-tight">Precision Focused</h3>
+                        <p class="text-gray-500 text-sm">Every detail matters. We ensure accuracy in measurements, lighting, and aesthetics.</p>
+                    </div>
+                    
+                    <div class="space-y-3 p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
+                        <div class="w-14 h-14 mx-auto bg-accent/10 rounded-xl flex items-center justify-center">
+                            <iconify-icon icon="lucide:hand-heart" class="text-2xl text-accent"></iconify-icon>
+                        </div>
+                        <h3 class="font-display text-lg font-bold tracking-tight">Full Support</h3>
+                        <p class="text-gray-500 text-sm">Dedicated team available throughout your project to ensure complete satisfaction.</p>
+                    </div>
+                </div>
+
+                <div class="mt-12">
+                    <button id="thank-you-btn"
+                        class="px-8 py-4 bg-accent text-white font-bold rounded-xl hover:bg-accent-dark transition-all duration-200 shadow-lg shadow-accent/25 text-sm inline-flex items-center gap-2">
+                        Start Your Project Today
+                        <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+                    </button>
                 </div>
             </div>
         </section>
@@ -866,13 +915,13 @@
                             class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
                             required>
                             <option value="" disabled selected>Select type</option>
-                            <option>Villa Project</option>
-                            <option>Apartment Project</option>
-                            <option>Township</option>
-                            <option>Commercial</option>
-                            <option>Plot Layout</option>
-                            <option>Interior Presentation</option>
-                            <option>Other</option>
+                            <option value="Villa Project">Villa Project</option>
+                            <option value="Apartment Project">Apartment Project</option>
+                            <option value="Township">Township</option>
+                            <option value="Commercial">Commercial</option>
+                            <option value="Plot Layout">Plot Layout</option>
+                            <option value="Interior Presentation">Interior Presentation</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
                     <div>
@@ -882,10 +931,10 @@
                             class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
                             required>
                             <option value="" disabled selected>Select stage</option>
-                            <option>Concept Stage</option>
-                            <option>Pre-Construction</option>
-                            <option>Under Construction</option>
-                            <option>Ready to Launch</option>
+                            <option value="Concept Stage">Concept Stage</option>
+                            <option value="Pre-Construction">Pre-Construction</option>
+                            <option value="Under Construction">Under Construction</option>
+                            <option value="Ready to Launch">Ready to Launch</option>
                         </select>
                     </div>
                 </div>
@@ -897,11 +946,11 @@
                         class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
                         required>
                         <option value="" disabled selected>Select package</option>
-                        <option>Standard</option>
-                        <option>Deluxe</option>
-                        <option>Premium</option>
-                        <option>Ultra Premium</option>
-                        <option>Not Sure Yet</option>
+                        <option value="Standard">Standard</option>
+                        <option value="Deluxe">Deluxe</option>
+                        <option value="Premium">Premium</option>
+                        <option value="Ultra Premium">Ultra Premium</option>
+                        <option value="Not Sure Yet">Not Sure Yet</option>
                     </select>
                 </div>
 
@@ -1049,13 +1098,13 @@
                             class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
                             required>
                             <option value="" disabled selected>Select type</option>
-                            <option>Villa Project</option>
-                            <option>Apartment Project</option>
-                            <option>Township</option>
-                            <option>Commercial</option>
-                            <option>Plot Layout</option>
-                            <option>Interior Presentation</option>
-                            <option>Other</option>
+                            <option value="Villa Project">Villa Project</option>
+                            <option value="Apartment Project">Apartment Project</option>
+                            <option value="Township">Township</option>
+                            <option value="Commercial">Commercial</option>
+                            <option value="Plot Layout">Plot Layout</option>
+                            <option value="Interior Presentation">Interior Presentation</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
                     <div>
@@ -1065,10 +1114,10 @@
                             class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
                             required>
                             <option value="" disabled selected>Select stage</option>
-                            <option>Concept Stage</option>
-                            <option>Pre-Construction</option>
-                            <option>Under Construction</option>
-                            <option>Ready to Launch</option>
+                            <option value="Concept Stage">Concept Stage</option>
+                            <option value="Pre-Construction">Pre-Construction</option>
+                            <option value="Under Construction">Under Construction</option>
+                            <option value="Ready to Launch">Ready to Launch</option>
                         </select>
                     </div>
                 </div>
@@ -1146,13 +1195,13 @@
                             class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
                             required>
                             <option value="" disabled selected>Select type</option>
-                            <option>Villa Project</option>
-                            <option>Apartment Project</option>
-                            <option>Township</option>
-                            <option>Commercial</option>
-                            <option>Plot Layout</option>
-                            <option>Interior Presentation</option>
-                            <option>Other</option>
+                            <option value="Villa Project">Villa Project</option>
+                            <option value="Apartment Project">Apartment Project</option>
+                            <option value="Township">Township</option>
+                            <option value="Commercial">Commercial</option>
+                            <option value="Plot Layout">Plot Layout</option>
+                            <option value="Interior Presentation">Interior Presentation</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
                     <div>
@@ -1162,10 +1211,10 @@
                             class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
                             required>
                             <option value="" disabled selected>Select stage</option>
-                            <option>Concept Stage</option>
-                            <option>Pre-Construction</option>
-                            <option>Under Construction</option>
-                            <option>Ready to Launch</option>
+                            <option value="Concept Stage">Concept Stage</option>
+                            <option value="Pre-Construction">Pre-Construction</option>
+                            <option value="Under Construction">Under Construction</option>
+                            <option value="Ready to Launch">Ready to Launch</option>
                         </select>
                     </div>
                 </div>
@@ -1303,6 +1352,8 @@
         const modal = document.getElementById('project-modal');
         const modalContent = document.getElementById('modal-content');
         const startBtn = document.getElementById('start-project-btn');
+        const ctaStartBtn = document.getElementById('cta-start-btn');
+        const thankYouBtn = document.getElementById('thank-you-btn');
         const talkBtn = document.getElementById('talk-expert-btn');
         const closeBtn = document.getElementById('close-modal-btn');
         const backdrop = document.getElementById('modal-backdrop');
@@ -1321,6 +1372,8 @@
         };
 
         startBtn.addEventListener('click', openModal);
+        if (ctaStartBtn) ctaStartBtn.addEventListener('click', openModal);
+        if (thankYouBtn) thankYouBtn.addEventListener('click', openModal);
         if (talkBtn) talkBtn.addEventListener('click', openModal);
         closeBtn.addEventListener('click', closeModal);
         backdrop.addEventListener('click', closeModal);
