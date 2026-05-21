@@ -505,9 +505,6 @@
 </p>
 
             <form name="project-request" method="POST" netlify id="project-form" class="space-y-4">
-<form name="project-request" method="POST" netlify id="project-form" class="space-y-4">
-
-</form>
 
 <div id="success-message" class="hidden text-center py-10">
     <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-green-100 flex items-center justify-center">
@@ -696,6 +693,8 @@
         </div>
     </div>
 
+
+
     <script>
         const modalTitle = document.getElementById('modal-title');
         const modalSubtitle = document.getElementById('modal-subtitle');
@@ -862,8 +861,8 @@
         if (closeContactBtn) closeContactBtn.addEventListener('click', closeContactModal);
         if (contactBackdrop) contactBackdrop.addEventListener('click', closeContactModal);
     
-    const projectForm = document.getElementById('project-form');
-    const successMessage = document.getElementById('success-message');
+const projectForm = document.getElementById('project-form');
+const successMessage = document.getElementById('success-message');
 
 projectForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -871,24 +870,34 @@ projectForm.addEventListener('submit', async (e) => {
     const formData = new FormData(projectForm);
 
     try {
-        await fetch("/", {
+        const response = await fetch("/", {
             method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
             body: new URLSearchParams(formData).toString()
         });
 
-        projectForm.classList.add('hidden');
-        successMessage.classList.remove('hidden');
+        if (response.ok) {
 
-        modalTitle.classList.add('hidden');
-        modalSubtitle.classList.add('hidden');
+            projectForm.style.display = "none";
 
-        setTimeout(() => {
-            window.location.href = "index.html";
-        }, 3000);
+            modalTitle.style.display = "none";
+            modalSubtitle.style.display = "none";
+
+            successMessage.classList.remove('hidden');
+
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 3000);
+
+        } else {
+            alert("Form submission failed.");
+        }
 
     } catch (error) {
-        alert("Something went wrong. Please try again.");
+        console.error(error);
+        alert("Something went wrong.");
     }
 });
     </script>
