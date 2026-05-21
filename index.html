@@ -106,6 +106,56 @@
             background: #9e9a90;
         }
 
+
+        /* Toast Notification Styles */
+        .toast-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            pointer-events: none;
+        }
+        .toast {
+            background-color: #1a4d4d;
+            color: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            animation: slideIn 0.3s ease-out;
+            pointer-events: auto;
+            max-width: 400px;
+        }
+        .toast.success {
+            background-color: #10b981;
+        }
+        .toast.error {
+            background-color: #ef4444;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes slideOut {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+        }
+        .toast.removing {
+            animation: slideOut 0.3s ease-out;
+        }
+    
         .dot-active {
             width: 28px !important;
             background-color: #1a4d4d !important;
@@ -120,14 +170,11 @@
         <nav class="fixed top-0 left-0 right-0 z-50 bg-surface border-b border-black/[0.06]">
             <div class="max-w-7xl mx-auto px-8 h-16 flex items-center justify-between">
                 <div class="flex items-center gap-2.5">
-                    <div
-                        class="w-9 h-9 bg-accent rounded-lg flex items-center justify-center shadow-lg shadow-accent/20">
-                        <iconify-icon icon="lucide:layers" class="text-white text-lg"></iconify-icon>
-                    </div>
+                    <img src="2logo final.png" alt="Zenoviz Logo" class="h-8 object-contain">
                     <span class="font-display text-xl font-bold tracking-tight">ZENOVIZ STUDIOS</span>
                 </div>
                 <div class="flex items-center gap-8 text-sm font-semibold text-gray-500">
-                    <a href="index.html" class="text-gray-900 transition-colors duration-200">Home</a>
+                    <a href="zenoviz1.html" class="text-gray-900 transition-colors duration-200">Home</a>
                     <a href="#" class="hover:text-gray-900 transition-colors duration-200">About Us</a>
                     <a href="services.html" class="hover:text-gray-900 transition-colors duration-200">Services</a>
                     <a href="#" class="hover:text-gray-900 transition-colors duration-200">Projects</a>
@@ -156,7 +203,7 @@
         </section>
 
         <!-- Main CardSwap Section -->
-        <section id="packages" class="relative py-14 overflow-hidden">
+        <section class="relative py-14 overflow-hidden">
             <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 px-8">
 
                 <!-- Left: Text Context -->
@@ -229,7 +276,7 @@
                                     </ul>
                                 </div>
                                 <div class="pt-6 border-t border-gray-100 mt-auto">
-                                    <a href="#packages"
+                                    <a href="services.html#standard"
                                         class="w-full py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all duration-200 bg-accent text-white hover:bg-accent-dark shadow-md shadow-accent/20">
                                         Explore Service
                                         <iconify-icon icon="lucide:arrow-right" class="text-sm"></iconify-icon>
@@ -276,7 +323,7 @@
                                     </ul>
                                 </div>
                                 <div class="pt-6 border-t border-gray-100 mt-auto">
-                                    <a href="#packages"
+                                    <a href="services.html#deluxe"
                                         class="w-full py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all duration-200 bg-accent text-white hover:bg-accent-dark shadow-md shadow-accent/20">
                                         Explore Service
                                         <iconify-icon icon="lucide:arrow-right" class="text-sm"></iconify-icon>
@@ -323,7 +370,7 @@
                                     </ul>
                                 </div>
                                 <div class="pt-6 border-t border-gray-100 mt-auto">
-                                    <a href="#packages"
+                                    <a href="services.html#premium"
                                         class="w-full py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all duration-200 bg-accent text-white hover:bg-accent-dark shadow-md shadow-accent/20">
                                         Explore Service
                                         <iconify-icon icon="lucide:arrow-right" class="text-sm"></iconify-icon>
@@ -370,7 +417,7 @@
                                     </ul>
                                 </div>
                                 <div class="pt-6 border-t border-white/10 mt-auto">
-                                    <a href="#packages"
+                                    <a href="services.html#ultra-premium"
                                         class="w-full py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all duration-200 bg-amber-300 text-accent hover:bg-amber-400 shadow-md shadow-black/10">
                                         Explore Service
                                         <iconify-icon icon="lucide:arrow-right" class="text-sm"></iconify-icon>
@@ -381,6 +428,280 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Matterport & VR Tours Section -->
+        <section class="py-24 px-8 bg-white relative overflow-hidden">
+            <!-- Subtle ambient glow -->
+            <div
+                class="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/[0.02] rounded-full blur-[120px] -mr-64 -mt-64 pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-surface-warm/60 rounded-full blur-[100px] -ml-48 -mb-48 pointer-events-none">
+            </div>
+
+            <div class="max-w-7xl mx-auto relative z-10">
+                <!-- Section Heading -->
+                <div class="text-center max-w-3xl mx-auto mb-20 space-y-5">
+                    <span class="text-xs font-bold text-accent uppercase tracking-[0.2em]">Immersive Experiences</span>
+                    <h2 class="font-display text-4xl lg:text-[3.25rem] font-bold tracking-tight leading-[1.1]">
+                        Matterport & VR Tours That<br />
+                        <span class="text-accent/35">Sell Spaces Before They Exist.</span>
+                    </h2>
+                    <p class="text-gray-500 leading-relaxed text-sm max-w-xl mx-auto">
+                        Immersive walkthroughs that help builders, architects, and real-estate developers showcase
+                        projects interactively — transforming static plans into navigable, photorealistic environments.
+                    </p>
+                </div>
+
+                <!-- Two-Column Showcase -->
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-stretch mb-20">
+
+                    <!-- LEFT: Immersive Preview Card -->
+                    <div
+                        class="flex-1 relative min-h-[480px] rounded-3xl overflow-hidden bg-accent shadow-[0_8px_40px_-8px_rgba(0,0,0,0.2),0_2px_12px_-4px_rgba(0,0,0,0.08)] group">
+                        <!-- Animated gradient background -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-accent via-accent-light to-accent-dark opacity-90">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(255,255,255,0.06)_0%,transparent_60%)]">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_80%,rgba(252,211,77,0.04)_0%,transparent_50%)]">
+                        </div>
+
+                        <!-- Grid pattern overlay -->
+                        <div class="absolute inset-0 opacity-[0.03]"
+                            style="background-image: linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.5) 1px, transparent 1px); background-size: 40px 40px;">
+                        </div>
+
+                        <!-- Center mockup frame -->
+                        <div
+                            class="absolute inset-8 lg:inset-10 rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-sm flex items-center justify-center">
+                            <div class="text-center space-y-5">
+                                <div
+                                    class="w-20 h-20 mx-auto rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/10 shadow-lg shadow-black/10">
+                                    <iconify-icon icon="lucide:rotate-3d" class="text-4xl text-white/80"></iconify-icon>
+                                </div>
+                                <div class="space-y-2">
+                                    <p class="text-white/90 font-display text-xl font-bold tracking-tight">Interactive
+                                        Tour Preview</p>
+                                    <p class="text-white/40 text-sm">Navigate rooms, explore details, experience scale
+                                    </p>
+                                </div>
+                                <!-- Play button -->
+                                <div
+                                    class="w-14 h-14 mx-auto rounded-full bg-white/10 border border-white/20 flex items-center justify-center cursor-pointer hover:bg-white/20 hover:scale-105 transition-all duration-300 shadow-xl shadow-black/10">
+                                    <iconify-icon icon="lucide:play" class="text-white text-xl ml-0.5"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating badges -->
+                        <div class="absolute top-6 left-6 flex flex-col gap-2.5">
+                            <span
+                                class="px-3.5 py-2 rounded-lg bg-white/10 backdrop-blur-md border border-white/10 text-white text-[11px] font-bold uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-black/10">
+                                <iconify-icon icon="lucide:compass" class="text-sm text-amber-300"></iconify-icon>
+                                360° Navigation
+                            </span>
+                            <span
+                                class="px-3.5 py-2 rounded-lg bg-white/10 backdrop-blur-md border border-white/10 text-white text-[11px] font-bold uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-black/10">
+                                <iconify-icon icon="lucide:glasses" class="text-sm text-amber-300"></iconify-icon>
+                                VR Ready
+                            </span>
+                        </div>
+
+                        <div class="absolute bottom-6 right-6">
+                            <span
+                                class="px-3.5 py-2 rounded-lg bg-white/10 backdrop-blur-md border border-white/10 text-white text-[11px] font-bold uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-black/10">
+                                <iconify-icon icon="lucide:mouse-pointer-click"
+                                    class="text-sm text-amber-300"></iconify-icon>
+                                Interactive Hotspots
+                            </span>
+                        </div>
+
+                        <!-- Corner accent lines -->
+                        <div class="absolute top-0 right-0 w-24 h-24 pointer-events-none">
+                            <div class="absolute top-6 right-0 w-8 h-px bg-white/20"></div>
+                            <div class="absolute top-0 right-6 w-px h-8 bg-white/20"></div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-24 h-24 pointer-events-none">
+                            <div class="absolute bottom-6 left-0 w-8 h-px bg-white/20"></div>
+                            <div class="absolute bottom-0 left-6 w-px h-8 bg-white/20"></div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: Feature Cards Stack -->
+                    <div class="flex-1 flex flex-col gap-5">
+
+                        <!-- Feature Card 1: Matterport Digital Twins -->
+                        <div
+                            class="bg-white border border-black/[0.04] rounded-2xl p-8 shadow-[0_4px_24px_-6px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_40px_-8px_rgba(0,0,0,0.12)] hover:border-accent/10 transition-all duration-300 group flex-1">
+                            <div class="flex items-start gap-5">
+                                <div
+                                    class="w-12 h-12 bg-surface-warm rounded-xl flex items-center justify-center shrink-0 group-hover:bg-accent/[0.08] transition-colors duration-300">
+                                    <iconify-icon icon="lucide:box" class="text-xl text-accent"></iconify-icon>
+                                </div>
+                                <div class="space-y-2.5">
+                                    <h4 class="font-display text-lg font-bold tracking-tight">Matterport Digital Twins
+                                    </h4>
+                                    <p class="text-gray-500 text-sm leading-relaxed">Capture precise spatial data and
+                                        create navigable 3D replicas of built and under-construction properties with
+                                        centimeter-level accuracy.</p>
+                                    <ul class="flex flex-wrap gap-x-4 gap-y-1.5 pt-1">
+                                        <li class="flex items-center gap-1.5 text-xs text-accent/60 font-semibold">
+                                            <iconify-icon icon="lucide:check"
+                                                class="text-emerald-500 text-xs"></iconify-icon>
+                                            Spatial Capture
+                                        </li>
+                                        <li class="flex items-center gap-1.5 text-xs text-accent/60 font-semibold">
+                                            <iconify-icon icon="lucide:check"
+                                                class="text-emerald-500 text-xs"></iconify-icon>
+                                            Floor Plan Export
+                                        </li>
+                                        <li class="flex items-center gap-1.5 text-xs text-accent/60 font-semibold">
+                                            <iconify-icon icon="lucide:check"
+                                                class="text-emerald-500 text-xs"></iconify-icon>
+                                            Measurement Tools
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feature Card 2: Interactive VR Walkthroughs -->
+                        <div
+                            class="bg-white border border-black/[0.04] rounded-2xl p-8 shadow-[0_4px_24px_-6px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_40px_-8px_rgba(0,0,0,0.12)] hover:border-accent/10 transition-all duration-300 group flex-1">
+                            <div class="flex items-start gap-5">
+                                <div
+                                    class="w-12 h-12 bg-surface-warm rounded-xl flex items-center justify-center shrink-0 group-hover:bg-accent/[0.08] transition-colors duration-300">
+                                    <iconify-icon icon="lucide:move-3d" class="text-xl text-accent"></iconify-icon>
+                                </div>
+                                <div class="space-y-2.5">
+                                    <h4 class="font-display text-lg font-bold tracking-tight">Interactive VR
+                                        Walkthroughs</h4>
+                                    <p class="text-gray-500 text-sm leading-relaxed">Step inside unbuilt properties
+                                        through fully immersive virtual reality tours — compatible with Meta Quest, HTC
+                                        Vive, and all major headsets.</p>
+                                    <ul class="flex flex-wrap gap-x-4 gap-y-1.5 pt-1">
+                                        <li class="flex items-center gap-1.5 text-xs text-accent/60 font-semibold">
+                                            <iconify-icon icon="lucide:check"
+                                                class="text-emerald-500 text-xs"></iconify-icon>
+                                            VR Headset Support
+                                        </li>
+                                        <li class="flex items-center gap-1.5 text-xs text-accent/60 font-semibold">
+                                            <iconify-icon icon="lucide:check"
+                                                class="text-emerald-500 text-xs"></iconify-icon>
+                                            Guided Tours
+                                        </li>
+                                        <li class="flex items-center gap-1.5 text-xs text-accent/60 font-semibold">
+                                            <iconify-icon icon="lucide:check"
+                                                class="text-emerald-500 text-xs"></iconify-icon>
+                                            Real-Time Rendering
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feature Card 3: Branded Sales Experiences -->
+                        <div
+                            class="bg-white border border-black/[0.04] rounded-2xl p-8 shadow-[0_4px_24px_-6px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_40px_-8px_rgba(0,0,0,0.12)] hover:border-accent/10 transition-all duration-300 group flex-1">
+                            <div class="flex items-start gap-5">
+                                <div
+                                    class="w-12 h-12 bg-surface-warm rounded-xl flex items-center justify-center shrink-0 group-hover:bg-accent/[0.08] transition-colors duration-300">
+                                    <iconify-icon icon="lucide:presentation" class="text-xl text-accent"></iconify-icon>
+                                </div>
+                                <div class="space-y-2.5">
+                                    <h4 class="font-display text-lg font-bold tracking-tight">Branded Sales Experiences
+                                    </h4>
+                                    <p class="text-gray-500 text-sm leading-relaxed">White-labeled virtual tours
+                                        embedded with your branding, floor plans, pricing sheets, and lead capture —
+                                        designed to convert visitors into buyers.</p>
+                                    <ul class="flex flex-wrap gap-x-4 gap-y-1.5 pt-1">
+                                        <li class="flex items-center gap-1.5 text-xs text-accent/60 font-semibold">
+                                            <iconify-icon icon="lucide:check"
+                                                class="text-emerald-500 text-xs"></iconify-icon>
+                                            Custom Branding
+                                        </li>
+                                        <li class="flex items-center gap-1.5 text-xs text-accent/60 font-semibold">
+                                            <iconify-icon icon="lucide:check"
+                                                class="text-emerald-500 text-xs"></iconify-icon>
+                                            Lead Capture
+                                        </li>
+                                        <li class="flex items-center gap-1.5 text-xs text-accent/60 font-semibold">
+                                            <iconify-icon icon="lucide:check"
+                                                class="text-emerald-500 text-xs"></iconify-icon>
+                                            Embed Anywhere
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Metrics / Stats Row -->
+                <div
+                    class="grid grid-cols-2 lg:grid-cols-4 gap-0 border border-black/[0.04] rounded-2xl overflow-hidden mb-20 shadow-sm">
+                    <div
+                        class="p-8 text-center border-r border-b lg:border-b-0 border-black/[0.04] hover:bg-accent/[0.02] transition-all duration-300">
+                        <p class="font-display text-3xl font-bold tracking-tight text-accent mb-1.5">99%</p>
+                        <p class="text-gray-500 text-sm font-medium">Client Engagement</p>
+                    </div>
+                    <div
+                        class="p-8 text-center border-b lg:border-b-0 lg:border-r border-black/[0.04] hover:bg-accent/[0.02] transition-all duration-300">
+                        <p class="font-display text-3xl font-bold tracking-tight text-accent mb-1.5">4K</p>
+                        <p class="text-gray-500 text-sm font-medium">Walkthrough Quality</p>
+                    </div>
+                    <div
+                        class="p-8 text-center border-r border-black/[0.04] hover:bg-accent/[0.02] transition-all duration-300">
+                        <p class="font-display text-3xl font-bold tracking-tight text-accent mb-1.5">VR</p>
+                        <p class="text-gray-500 text-sm font-medium">Headset Compatible</p>
+                    </div>
+                    <div class="p-8 text-center hover:bg-accent/[0.02] transition-all duration-300">
+                        <p class="font-display text-3xl font-bold tracking-tight text-accent mb-1.5">All</p>
+                        <p class="text-gray-500 text-sm font-medium">Mobile + Web Supported</p>
+                    </div>
+                </div>
+
+                <!-- CTA Block -->
+                <div class="bg-accent rounded-3xl p-14 lg:p-20 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/[0.03] rounded-full blur-[100px] -mr-48 -mt-48">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-amber-300/[0.04] rounded-full blur-[80px] -ml-32 -mb-32">
+                    </div>
+                    <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
+                        <div class="space-y-4 max-w-lg">
+                            <span class="text-[11px] font-bold text-white/30 uppercase tracking-[0.2em]">Immersive
+                                Technology</span>
+                            <h2
+                                class="font-display text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.1]">
+                                Let buyers experience the property before construction begins.</h2>
+                            <p class="text-white/50 leading-relaxed text-sm">
+                                From Matterport scans to fully interactive VR environments — give your clients a reason
+                                to commit before the first brick is laid.
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-3 shrink-0">
+                            <a href="#"
+                                class="px-10 py-4 bg-white text-accent font-bold rounded-xl hover:bg-gray-50 transition-all duration-200 flex items-center justify-center gap-2 shadow-xl shadow-black/10 text-sm">
+                                Book a Demo
+                                <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+                            </a>
+                            <a href="#"
+                                class="px-10 py-4 bg-transparent border border-white/15 text-white font-bold rounded-xl hover:bg-white/5 transition-all duration-200 text-center text-sm">
+                                Explore VR Tours
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -472,11 +793,11 @@
             <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex items-center gap-2">
                     <div class="w-6 h-6 bg-gray-200 rounded-md flex items-center justify-center">
-                        <iconify-icon icon="lucide:layers" class="text-gray-400 text-xs"></iconify-icon>
+                        <img src="2logo final.png" alt="Zenoviz Logo" class="h-9 object-contain">
                     </div>
                     <span class="font-display text-sm font-bold tracking-tight text-gray-400">ZENOVIZ STUDIOS</span>
                 </div>
-                <p class="text-gray-400 text-xs">&copy; 2024 Architectural Visualization Studio. All rights reserved.
+                <p class="text-gray-400 text-xs">&copy; 2026 Zenoviz Studios. All rights reserved.
                 </p>
                 <div class="flex gap-5">
                     <a href="#" class="text-gray-400 hover:text-gray-700 transition-colors"><iconify-icon
@@ -499,38 +820,17 @@
                 class="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors">
                 <iconify-icon icon="lucide:x" class="text-xl"></iconify-icon>
             </button>
-            <h3 id="modal-title" class="font-display text-2xl font-bold mb-1">Start Your Project</h3>
-            <p id="modal-subtitle" class="text-sm text-gray-500 mb-6">
-    Tell us about your requirements, and we'll get back to you.
-</p>
+            <h3 class="font-display text-2xl font-bold mb-1">Start Your Project</h3>
+            <p class="text-sm text-gray-500 mb-6">Tell us about your requirements, and we'll get back to you.</p>
 
-            <form name="project-request" method="POST" netlify id="project-form" class="space-y-4">
-
-<div id="success-message" class="hidden text-center py-10">
-    <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-green-100 flex items-center justify-center">
-        <iconify-icon icon="lucide:check" class="text-3xl text-green-600"></iconify-icon>
-    </div>
-
-    <h3 class="font-display text-2xl font-bold mb-2">
-        Thank You!
-    </h3>
-
-    <p class="text-gray-500 text-sm leading-relaxed mb-5">
-        Your project request has been submitted successfully.
-        Our team will contact you shortly.
-    </p>
-
-    <p class="text-xs text-gray-400">
-        Redirecting to home page...
-    </p>
-</div>
-        
-                <input type="hidden" name="form-name" value="project-request">
+            <form class="space-y-4" name="start-project" method="POST" netlify netlify-honeypot="bot-field">
+                <input type="hidden" name="bot-field">
+                <input type="hidden" name="package-type" value="Inquiry">
                 <div class="grid grid-cols-2 gap-4">
                     <div>
                         <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">Full
                             Name</label>
-                        <input type="text" name="full_name"
+                        <input type="text"
                             class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
                             required>
                     </div>
@@ -538,21 +838,21 @@
                         <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">Company
                             /
                             Builder</label>
-                        <input type="text" name="company"
+                        <input type="text"
                             class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
                             required>
                     </div>
                     <div>
                         <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">Phone
                             Number</label>
-                        <input type="tel" name="phone"
+                        <input type="tel"
                             class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
                             required>
                     </div>
                     <div>
                         <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">Email
                             Address</label>
-                        <input type="email" name="email"
+                        <input type="email"
                             class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
                             required>
                     </div>
@@ -562,7 +862,7 @@
                     <div>
                         <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">Project
                             Type</label>
-                        <select name="project_type"
+                        <select
                             class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
                             required>
                             <option value="" disabled selected>Select type</option>
@@ -578,7 +878,7 @@
                     <div>
                         <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">Project
                             Stage</label>
-                        <select name="project_stage"
+                        <select
                             class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
                             required>
                             <option value="" disabled selected>Select stage</option>
@@ -593,7 +893,7 @@
                 <div>
                     <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">Required
                         Package</label>
-                    <select name="required_package"
+                    <select
                         class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all"
                         required>
                         <option value="" disabled selected>Select package</option>
@@ -609,7 +909,7 @@
                     <label class="block text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">Tell Us
                         About Your
                         Project</label>
-                    <textarea name="project_details" rows="3"
+                    <textarea rows="3"
                         class="w-full px-3 py-2 bg-surface-warm/50 border border-black/5 rounded-lg text-sm focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/30 transition-all resize-none"
                         placeholder="Share your project details, goals, required features, and any references you have."
                         required></textarea>
@@ -693,17 +993,11 @@
         </div>
     </div>
 
-
-
     <script>
-        const modalTitle = document.getElementById('modal-title');
-        const modalSubtitle = document.getElementById('modal-subtitle');
         const cards = Array.from(document.querySelectorAll('.swap-card'));
         const nextBtn = document.getElementById('next-btn');
         const prevBtn = document.getElementById('prev-btn');
         const dotsContainer = document.getElementById('pagination-dots');
-
-        
 
         const config = {
             cardDistance: 40,
@@ -860,47 +1154,43 @@
         if (contactBtn) contactBtn.addEventListener('click', openContactModal);
         if (closeContactBtn) closeContactBtn.addEventListener('click', closeContactModal);
         if (contactBackdrop) contactBackdrop.addEventListener('click', closeContactModal);
-    
-const projectForm = document.getElementById('project-form');
-const successMessage = document.getElementById('success-message');
+    </script>
 
-projectForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
+    <!-- Toast Container -->
+    <div id="toast-container" class="toast-container"></div>
 
-    const formData = new FormData(projectForm);
+    <script>
+        // Toast notification function
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.textContent = message;
+            container.appendChild(toast);
 
-    try {
-        const response = await fetch("/", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
-            },
-            body: new URLSearchParams(formData).toString()
-        });
-
-        if (response.ok) {
-
-            projectForm.style.display = "none";
-
-            modalTitle.style.display = "none";
-            modalSubtitle.style.display = "none";
-
-            successMessage.classList.remove('hidden');
-
+            // Auto remove after 3.5 seconds
             setTimeout(() => {
-                window.location.href = "index.html";
-            }, 3000);
-
-        } else {
-            alert("Form submission failed.");
+                toast.classList.add('removing');
+                setTimeout(() => toast.remove(), 300);
+            }, 3500);
         }
 
-    } catch (error) {
-        console.error(error);
-        alert("Something went wrong.");
-    }
-});
+        // Handle all form submissions
+        document.addEventListener('submit', function(e) {
+            if (e.target.matches('form[netlify]')) {
+                // Allow Netlify to handle the submission
+                setTimeout(() => {
+                    showToast('Thank you for your inquiry! Our team will shortly respond to you.', 'success');
+                    e.target.reset();
+                    // Close the modal
+                    document.querySelectorAll('[id^="modal-"]').forEach(modal => {
+                        modal.style.opacity = '0';
+                        modal.style.pointerEvents = 'none';
+                    });
+                }, 100);
+            }
+        }, true);
     </script>
-</body>
+    </body>
 
 </html>
