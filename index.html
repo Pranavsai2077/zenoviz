@@ -872,6 +872,7 @@
             <p class="text-sm text-gray-500 mb-6">Tell us about your requirements, and we'll get back to you.</p>
 
             <form class="space-y-4" name="start-project" method="POST" netlify netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="start-project">
                 <input type="hidden" name="bot-field">
                 <input type="hidden" name="package-type" value="Inquiry">
                 <div class="grid grid-cols-2 gap-4">
@@ -1054,6 +1055,7 @@
             <p class="text-sm text-gray-500 mb-6">Luxury boutique apartment solutions with day/night modes and custom UI.</p>
 
             <form class="space-y-4" name="premium-inquiry" method="POST" netlify netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="premium-inquiry">
                 <input type="hidden" name="bot-field">
                 <input type="hidden" name="package-type" value="Premium">
                 <div class="grid grid-cols-2 gap-4">
@@ -1151,6 +1153,7 @@
             <p class="text-sm text-gray-500 mb-6">Cinematic luxury with AI-powered environments, VR integration, and unlimited revisions.</p>
 
             <form class="space-y-4" name="ultra-premium-inquiry" method="POST" netlify netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="ultra-premium-inquiry">
                 <input type="hidden" name="bot-field">
                 <input type="hidden" name="package-type" value="Ultra Premium">
                 <div class="grid grid-cols-2 gap-4">
@@ -1468,19 +1471,51 @@
             }, 3500);
         }
 
-        // Handle all form submissions
+        // Handle all form submissions via AJAX so modals stay open on success
         document.addEventListener('submit', function(e) {
             if (e.target.matches('form[netlify]')) {
-                // Allow Netlify to handle the submission
-                setTimeout(() => {
-                    showToast('Thank you for your inquiry! Our team will shortly respond to you.', 'success');
-                    e.target.reset();
-                    // Close the modal
-                    document.querySelectorAll('[id^="modal-"]').forEach(modal => {
-                        modal.style.opacity = '0';
-                        modal.style.pointerEvents = 'none';
-                    });
-                }, 100);
+                e.preventDefault();
+                const form = e.target;
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn ? submitBtn.textContent : '';
+
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Submitting...';
+                }
+
+                fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(new FormData(form)).toString(),
+                })
+                .then(response => {
+                    if (response.ok) {
+                        showToast('Thank you for your inquiry! Our team will shortly respond to you.', 'success');
+                        form.reset();
+                        // Close whichever modal contains this form
+                        const parentModal = form.closest('[id$="-modal"]') || form.closest('#project-modal');
+                        if (parentModal) {
+                            parentModal.classList.add('opacity-0', 'pointer-events-none');
+                            const content = parentModal.querySelector('[id$="-content"]');
+                            if (content) {
+                                content.classList.remove('scale-100');
+                                content.classList.add('scale-95');
+                            }
+                        }
+                    } else {
+                        showToast('Something went wrong. Please try again.', 'error');
+                    }
+                })
+                .catch(() => {
+                    showToast('Something went wrong. Please try again.', 'error');
+                })
+                .finally(() => {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalText;
+                    }
+                });
             }
         }, true);
     </script>
